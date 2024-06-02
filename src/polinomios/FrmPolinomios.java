@@ -5,6 +5,8 @@
  */
 package polinomios;
 
+import static polinomios.Polinomio.printPol;
+
 /**
  *
  * @author USUARIO
@@ -15,9 +17,10 @@ public class FrmPolinomios extends javax.swing.JFrame {
 
     public FrmPolinomios() {
         initComponents();
+
         p1 = new Polinomio();
         p2 = new Polinomio();
-        
+
         jPanel3.setVisible(false);
     }
 
@@ -316,9 +319,17 @@ public class FrmPolinomios extends javax.swing.JFrame {
     private void txtCoeficienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCoeficienteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCoeficienteActionPerformed
-
+    
+    //Acción Limpiar
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
-        
+        lblPolinomio1.setText("");
+        lblPolinomio2.setText("");
+        lblPolinomioR.setText("");
+        lblResiduo.setText("");
+        cmbPolinomio.setSelectedIndex(0);
+
+        p1 = Polinomio.restar(p1, p1);
+        p2 = Polinomio.restar(p2, p2);
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
     private void cmbPolinomioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbPolinomioActionPerformed
@@ -326,9 +337,9 @@ public class FrmPolinomios extends javax.swing.JFrame {
     }//GEN-LAST:event_cmbPolinomioActionPerformed
 
     private void cmbOperacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbOperacionActionPerformed
-        if(cmbOperacion.getSelectedIndex() == 3){
+        if (cmbOperacion.getSelectedIndex() == 3) {
             jPanel3.setVisible(true);
-        }else{
+        } else {
             jPanel3.setVisible(false);
         }
     }//GEN-LAST:event_cmbOperacionActionPerformed
@@ -392,4 +403,5 @@ public class FrmPolinomios extends javax.swing.JFrame {
     private javax.swing.JTextField txtCoeficiente;
     private javax.swing.JTextField txtExponente;
     // End of variables declaration//GEN-END:variables
+
 }

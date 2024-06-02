@@ -181,7 +181,6 @@ public class Polinomio {
                 pR.agregar(n);
             }
         }
-
         return pR;
     }
 
@@ -200,7 +199,6 @@ public class Polinomio {
             apuntador1 = apuntador1.siguiente;
             apuntador2 = p2.getCabeza();
         }
-
         return pR;
     }
 
@@ -242,36 +240,7 @@ public class Polinomio {
         }
         return pR;
     }
-/*
-    public static Polinomio division(Polinomio p1, Polinomio p2) {
-
-        Polinomio pR = new Polinomio();
-        Polinomio pResiduo = p1;
-
-        Nodo apuntador1 = pResiduo.getMayorExponente();
-        Nodo apuntador2 = p2.getMayorExponente();
-
-        while (esDivisible(apuntador1, apuntador2)) {
-
-            System.out.print("P: ");
-            printPol(pResiduo.getCabeza());
-            System.out.println("");
-
-            Nodo cociente = new Nodo(apuntador1.coeficiente / apuntador2.coeficiente, apuntador1.exponente - apuntador2.exponente);
-            System.out.println("C: " + cociente.coeficiente + "x^" + cociente.exponente + " ");
-
-            pR.agregar(cociente);
-            pResiduo = restar(pResiduo, multiNP(cociente, p2));
-
-            //Si es una división exacta Residuo = 0
-            if (pResiduo.cabeza == null) {
-                pResiduo.cabeza = new Nodo(0, 0);
-            }
-            apuntador1 = pResiduo.getMayorExponente();
-        }
-        return pR;
-    }*/
-
+    
     //Función recursiva para ir viendo cómo cambia el Residuo
     public static void printPol(Nodo n) {
         if (n != null) {
