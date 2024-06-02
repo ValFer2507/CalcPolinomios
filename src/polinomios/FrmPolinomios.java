@@ -73,11 +73,11 @@ public class FrmPolinomios extends javax.swing.JFrame {
 
         jLabel4.setText("Polinomio 1");
 
-        lblPolinomio1.setBackground(new java.awt.Color(0, 153, 204));
+        lblPolinomio1.setBackground(new java.awt.Color(51, 204, 255));
         lblPolinomio1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         lblPolinomio1.setOpaque(true);
 
-        lblPolinomio2.setBackground(new java.awt.Color(0, 153, 204));
+        lblPolinomio2.setBackground(new java.awt.Color(51, 204, 255));
         lblPolinomio2.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         lblPolinomio2.setOpaque(true);
 
@@ -327,6 +327,8 @@ public class FrmPolinomios extends javax.swing.JFrame {
         lblPolinomioR.setText("");
         lblResiduo.setText("");
         cmbPolinomio.setSelectedIndex(0);
+        txtCoeficiente.setText("");
+        txtExponente.setText("");
 
         p1 = Polinomio.restar(p1, p1);
         p2 = Polinomio.restar(p2, p2);
